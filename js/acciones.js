@@ -5,10 +5,10 @@ $(document).ready(function(e){
  
     $('#Beep').click(
 function(e){
-	alert('Hiciste click en el boton beep');
+	navigator.notification.beep(1);
   });//click Beep
    $('#Vibrar').click(
 function(e){
-	alert('Hiciste click en el boton vibrar');
+	navigator.notification.vibrate(1000);
   });//click Vibrar
 });//ready
