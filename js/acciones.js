@@ -1,12 +1,11 @@
 //JavaScript
 	var audio;
-$(document).ready(function(e){
-	if (window.plugins&&window.plugins.LowLatencyAudio)
 	
-	audio=window.plugins.LowLatencyAudio;
-	audio.preloadFX('mario','audio/mario.mp3', function(msg){},
-	    function(msg){alert('error: ' +msg);});
-
+$(document).ready(function(e){
+	document.addEventListener("deviceready",function(){
+		audio=window.plugins.LowLatencyAudio;
+		audio.preloadFX('mario','audio/mario.mp3',function(msg){},function(msg){alert('error: ' +msg);});
+	
     $('#Beep').bind ("tap",
 function(e){
 	navigator.notification.beep(1);
@@ -19,5 +18,5 @@ function(e){
 function(e){
 	audio.play('mario');
   });//click Vibrar
-  
+	});//device ready
 });//ready
