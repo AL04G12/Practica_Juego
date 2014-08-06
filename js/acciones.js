@@ -7,16 +7,17 @@ $(document).ready(function(e){
 	audio.preloadFX('mario','audio/mario.mp3', function(msg){},
 	    function(msg){alert('error: ' +msg);});
 
-    $('#Beep').click(
+    $('#Beep').tap(
 function(e){
 	navigator.notification.beep(1);
   });//click Beep
-   $('#Vibrar').click(
+   $('#Vibrar').tap(
 function(e){
 	navigator.notification.vibrate(1000);
   });//click Vibrar
-    $('#Play').click(
+    $('#Play').tap(
 function(e){
 	audio.play('mario');
   });//click Vibrar
+  
 });//ready
